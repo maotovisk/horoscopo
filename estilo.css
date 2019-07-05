@@ -20,6 +20,14 @@ section {
     margin-right: 15%;
     animation: 0.8s fadein linear;
 }
+@media (max-width:768px) {
+    section {
+        margin-left: 5%;
+        margin-right: 5%;
+        animation: 0.8s fadein linear;
+    }
+
+}
 section.inicio {
     height: 100%;
 }
@@ -50,6 +58,7 @@ section.formsection {
 .scroll-button {
     transition: 0.3s;
     text-decoration: none;
+    z-index: 1;
     color: white;
     -webkit-transition: 0.3s;
 }
@@ -88,6 +97,7 @@ section.formsection {
     width: 70%;
     height: auto;
     padding-top: 20px;
+    z-index: -1;
     padding-bottom: 20px;
 }
 @media (max-width: 768px){
@@ -122,4 +132,49 @@ section.resultados {
 }
 li {
     list-style-type: none;
+}
+/*
+
+utilidade de rotação 
+
+*/
+@keyframes rotating
+	{
+	from
+		{
+		transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		}
+	to
+		{
+		transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		}
+	}
+@-webkit-keyframes rotating
+	{
+	from
+		{
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		}
+	to
+		{
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		}
+	}
+.rotating
+	{
+	-webkit-animation: rotating 8s linear infinite;
+	-moz-animation: rotating 8s linear infinite;
+	-ms-animation: rotating 8s linear infinite;
+	-o-animation: rotating 8s linear infinite;
+	animation: rotating 8s linear infinite;
 }
